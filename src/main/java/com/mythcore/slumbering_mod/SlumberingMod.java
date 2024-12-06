@@ -1,9 +1,11 @@
 package com.mythcore.slumbering_mod;
 
 
+import com.mythcore.slumbering_mod.util.DimensionTimerManager;
 import com.mythcore.slumbering_mod.world.dimension.ModDimensions;
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
@@ -33,6 +35,13 @@ public class SlumberingMod implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 		LOGGER.info("Hello Quilt world from {}!", MOD_ID);
 		ModDimensions.registerDimensions();
+
+		ServerTickEvents.END_WORLD_TICK.register(world -> {
+			if (world.getRegistryKey().getValue().getNamespace().equals(MOD_ID)) {
+				DimensionTimerManager.onTick((ServerWorld) world);
+			}
+		});
+	}
 	}
 
 
@@ -67,4 +76,4 @@ public class SlumberingMod implements ModInitializer {
 			throw new AssertionError("Cow was moved to different world, but not to the correct location.");
 		}
 	}*/
-}
+
