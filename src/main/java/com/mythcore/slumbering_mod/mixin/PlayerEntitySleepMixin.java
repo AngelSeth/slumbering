@@ -37,7 +37,8 @@ public class PlayerEntitySleepMixin {
 		player.teleport((ServerWorld) slumber, slumber.getSpawnPos().getX(), slumber.getSpawnPos().getY(), slumber.getSpawnPos().getZ(), 0, 0);
 		InventoryManager.saveInventory(player);
 		InventoryManager.clearInventory(player);
-		DimensionTimerManager.startTimer(player);
+		//DimensionTimerManager.startTimer(player);
+		DimensionTimerManager.startTracking(player);
 	}
 
 
