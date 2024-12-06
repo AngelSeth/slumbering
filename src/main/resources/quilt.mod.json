@@ -1,0 +1,37 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "io.github.angelseth",
+		"id": "slumbering_mod",
+		"version": "${version}",
+		"metadata": {
+			"name": "Slumbering",
+			"description": "A short description of your mod.",
+			"contributors": {
+				"Your name here": "Mythcore"
+			},
+			"contact": {
+			},
+			"icon": "assets/slumbering_mod/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "com.mythcore.slumbering_mod.SlumberingMod"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.19.1"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=7.0.2"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.20"
+			}
+		]
+	},
+	"mixin": "slumbering_mod.mixins.json"
+}

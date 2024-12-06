@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.mythcore.slumbering_mod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [ "PlayerEntitySleepMixin"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
