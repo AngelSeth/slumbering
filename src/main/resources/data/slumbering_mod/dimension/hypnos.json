@@ -5,7 +5,7 @@
     "biome_source": {
       "biomes": [
         {
-          "biome": "minecraft:plains",
+          "biome": "slumbering_mod:limbo",
           "parameters": {
             "continentalness": 0,
             "depth": 0,
