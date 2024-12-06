@@ -2,6 +2,7 @@ package com.mythcore.slumbering_mod;
 
 
 import com.mythcore.slumbering_mod.util.DimensionTimerManager;
+import com.mythcore.slumbering_mod.world.biome.ModBiomes;
 import com.mythcore.slumbering_mod.world.dimension.ModDimensions;
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
@@ -33,8 +34,8 @@ public class SlumberingMod implements ModInitializer {
 
 	@Override
 	public void onInitialize(ModContainer mod) {
-		LOGGER.info("Hello Quilt world from {}!", MOD_ID);
 		ModDimensions.registerDimensions();
+		ModBiomes.registerBiomes();
 
 		ServerTickEvents.END_WORLD_TICK.register(world -> {
 			if (world.getRegistryKey().getValue().getNamespace().equals(MOD_ID)) {
