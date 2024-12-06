@@ -1,6 +1,7 @@
 package com.mythcore.slumbering_mod.mixin;
 
 import com.mojang.datafixers.util.Either;
+import com.mythcore.slumbering_mod.util.InventoryManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -32,5 +33,9 @@ public class PlayerEntitySleepMixin {
 	private void teleportToSlumber(ServerPlayerEntity player) {
 		World slumber = player.getServer().getWorld(WORLD_KEY);
 		player.teleport((ServerWorld) slumber, slumber.getSpawnPos().getX(), slumber.getSpawnPos().getY(), slumber.getSpawnPos().getZ(), 0, 0);
+		InventoryManager.saveInventory(player);
+		InventoryManager.clearInventory(player);
 	}
+
+
 }
