@@ -24,8 +24,7 @@ public class ModDimensions {
 	public static final RegistryKey<World> WORLD_KEY = RegistryKey.of(RegistryKeys.WORLD,
 			new Identifier(SlumberingMod.MOD_ID, "hypnos"));
 
-	public static final RegistryKey<DimensionType> SLUMBERING_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
-			new Identifier(SlumberingMod.MOD_ID, "hypnos_type"));
+	public static final RegistryKey<DimensionType> SLUMBERING_DIM_TYPE = ModDimensionTypes.HYPNOS_DIM_TYPE;
 
 
 

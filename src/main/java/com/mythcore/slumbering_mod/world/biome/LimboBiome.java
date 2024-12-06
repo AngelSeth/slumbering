@@ -1,6 +1,7 @@
 package com.mythcore.slumbering_mod.world.biome;
 
 import net.minecraft.sound.BiomeMoodSound;
+import net.minecraft.sound.MusicSound;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
