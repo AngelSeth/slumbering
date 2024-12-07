@@ -1,0 +1,10 @@
+{
+  "type": "slumbering_mod:watchtower",
+  "biomes": [
+    "minecraft:plains",
+    "slumbering_mod:limbo"
+  ],
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "spawn_overrides": {}
+}

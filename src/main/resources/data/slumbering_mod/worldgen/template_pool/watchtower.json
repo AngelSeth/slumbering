@@ -1,0 +1,13 @@
+{
+  "name": "slumbering_mod:watchtower",
+  "fallback": "minecraft:empty",
+  "elements": [{
+    "weight": 1,
+    "element": {
+      "location": "slumbering_mod:towers/watchtower.json",
+      "processors": "minecraft:empty",
+      "projection": "rigid",
+      "element_type": "minecraft:single_pool_element"
+    }
+  }]
+}
