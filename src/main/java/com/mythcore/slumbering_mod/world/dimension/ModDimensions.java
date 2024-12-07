@@ -28,7 +28,6 @@ public class ModDimensions {
 
 
 
-
 	public static void registerDimensions() {
 		 SlumberingMod.LOGGER.info("Registering Dimensions for " + SlumberingMod.MOD_ID);
 	}

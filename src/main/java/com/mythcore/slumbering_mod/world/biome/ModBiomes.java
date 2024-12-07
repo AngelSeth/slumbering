@@ -10,9 +10,6 @@ import net.minecraft.world.dimension.DimensionType;
 
 public class ModBiomes {
 
-	public static final RegistryKey<Biome> LIMBO_BIOME = RegistryKey.of(RegistryKeys.BIOME,
-		new Identifier(SlumberingMod.MOD_ID, "limbo"));
-
 	public static void registerBiomes() {
 		SlumberingMod.LOGGER.info("Registering Biomes for " + SlumberingMod.MOD_ID);
 	}

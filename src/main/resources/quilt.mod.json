@@ -17,6 +17,7 @@
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
 			"init": "com.mythcore.slumbering_mod.SlumberingMod"
+
 		},
 		"depends": [
 			{

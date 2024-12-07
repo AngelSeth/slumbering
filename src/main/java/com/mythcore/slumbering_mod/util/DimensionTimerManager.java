@@ -1,5 +1,6 @@
 package com.mythcore.slumbering_mod.util;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
@@ -34,9 +35,9 @@ public class DimensionTimerManager {
 
 			// Get player's spawn position or fallback to Overworld spawn
 			BlockPos spawnPos = player.getSpawnPointPosition();
-			if (spawnPos == null || !overworld.isChunkLoaded(spawnPos)) {
+			/*if (spawnPos == null || !overworld.isChunkLoaded(spawnPos)) {
 				spawnPos = overworld.getSpawnPos();
-			}
+			}*/
 
 			try {
 				// Ensure the chunk is loaded before teleporting
@@ -47,7 +48,7 @@ public class DimensionTimerManager {
 				player.teleport(
 					overworld,
 					spawnPos.getX() + 0.5,
-					spawnPos.getY() + 0.5,
+					spawnPos.getY() + 0.6,
 					spawnPos.getZ() + 0.5,
 					player.getYaw(),
 					player.getPitch()
@@ -61,7 +62,6 @@ public class DimensionTimerManager {
 				e.printStackTrace();
 			}
 		});
-
 	}
 
 	// Start tracking the player
@@ -73,6 +73,10 @@ public class DimensionTimerManager {
 	public static void stopTracking(ServerPlayerEntity player) {
 		playersInDimension.put(player.getUuid(), false);
 	}
+	public static boolean isPlayerInDimension(ServerPlayerEntity player) {
+		return playersInDimension.getOrDefault(player.getUuid(), false);
+	}
+
 }
 
 

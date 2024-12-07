@@ -2,6 +2,7 @@ package com.mythcore.slumbering_mod;
 
 
 import com.mythcore.slumbering_mod.util.DimensionTimerManager;
+import com.mythcore.slumbering_mod.util.PlayerDeathEvent;
 import com.mythcore.slumbering_mod.world.biome.ModBiomes;
 import com.mythcore.slumbering_mod.world.dimension.ModDimensions;
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
@@ -36,12 +37,15 @@ public class SlumberingMod implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 		ModDimensions.registerDimensions();
 		ModBiomes.registerBiomes();
+		PlayerDeathEvent.register();
 
 		ServerTickEvents.END_WORLD_TICK.register(world -> {
 			if (world.getRegistryKey().getValue().getNamespace().equals(MOD_ID)) {
 				DimensionTimerManager.onTick((ServerWorld) world);
 			}
 		});
+		
+
 	}
 	}
 
