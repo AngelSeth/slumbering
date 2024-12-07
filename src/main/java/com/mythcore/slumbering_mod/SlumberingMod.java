@@ -5,26 +5,12 @@ import com.mythcore.slumbering_mod.util.DimensionTimerManager;
 import com.mythcore.slumbering_mod.util.PlayerDeathEvent;
 import com.mythcore.slumbering_mod.world.biome.ModBiomes;
 import com.mythcore.slumbering_mod.world.dimension.ModDimensions;
-import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.minecraft.block.Block;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.passive.CowEntity;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.test.TestServer;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.TeleportTarget;
-import net.minecraft.world.World;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static com.mythcore.slumbering_mod.world.dimension.ModDimensions.WORLD_KEY;
 
 public class SlumberingMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -44,7 +30,7 @@ public class SlumberingMod implements ModInitializer {
 				DimensionTimerManager.onTick((ServerWorld) world);
 			}
 		});
-		
+
 
 	}
 	}
