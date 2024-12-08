@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:default",
+  "config": {
+    "top_material": {
+      "Name": "minecraft:water"
+    },
+    "under_material": {
+      "Name": "minecraft:water"
+    },
+    "underwater_material": {
+      "Name": "minecraft:water"
+    }
+  }
+}

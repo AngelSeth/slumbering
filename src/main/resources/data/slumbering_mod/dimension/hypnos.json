@@ -5,7 +5,7 @@
     "biome_source": {
       "biomes": [
         {
-          "biome": "slumbering_mod:limbo",
+          "biome": "slumbering_mod:submerged",
           "parameters": {
             "continentalness": 0,
             "depth": 0,
