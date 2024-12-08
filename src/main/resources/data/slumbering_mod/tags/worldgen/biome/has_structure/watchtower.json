@@ -1,9 +1,0 @@
-{
-  "values": [
-    "minecrat:plains",
-    {
-      "id": "slumbering_mod:limbo",
-      "required": false
-    }
-  ]
-}

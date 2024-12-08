@@ -8,7 +8,7 @@
   },
   "structures": [
     {
-      "structure": "slumbering_mod:towers",
+      "structure": "slumbering_mod:watchtower",
       "weight": 1
     }
   ]

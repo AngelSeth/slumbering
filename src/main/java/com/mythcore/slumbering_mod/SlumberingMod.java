@@ -23,6 +23,7 @@ public class SlumberingMod implements ModInitializer {
 	public void onInitialize(ModContainer mod) {
 		ModDimensions.registerDimensions();
 		ModBiomes.registerBiomes();
+		//ModStructures.registerStructures();
 		PlayerDeathEvent.register();
 
 		ServerTickEvents.END_WORLD_TICK.register(world -> {
